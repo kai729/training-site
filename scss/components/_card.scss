@@ -1,0 +1,19 @@
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  &--hoverable:hover { box-shadow: $shadow-sm; }
+
+  &__media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #f8fafc;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__content { padding: $sp-4; }
+  &__title   { margin: 0 0 $sp-2; font: 700 1.125rem/1.4 $font-base; @include line-clamp-1; }
+  &__body    { margin: 0 0 $sp-4; color: $color-neutral-600; line-height: 1.8; }
+}

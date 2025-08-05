@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* 1行目のこれを削除：@import url("assets/css/style.scss"); */
+/* Minimal reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+body {
+  margin: 0;
+  font: 400 1rem/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+button, input, textarea, select {
+  font: inherit; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* CSS Document */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font: 500 0.95rem/1.2 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform .02s ease, box-shadow .2s ease, filter .2s ease; }
+  .btn:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); }
+  .btn:active {
+    transform: translateY(1px); }
+  .btn:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35); }
+  .btn--primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff; }
+    .btn--primary:hover {
+      filter: brightness(0.95); }
+  .btn--ghost {
+    background: transparent;
+    color: #0f172a; }
+  .btn--sm {
+    padding: 0.5rem 0.75rem;
+    font-size: .9rem; }
+  .btn--lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem; }
+  .btn.is-loading {
+    pointer-events: none;
+    opacity: .7; }
+
+/* CSS Document */
+.heading {
+  margin: 0 0 0.75rem;
+  color: #0f172a;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* ↓ ここを文字列で渡す。どちらか一方でOK */
+  /* 方法A: unquote */
+  /* 方法B: 補間でエスケープ（Aが効けばこれは不要）
+  &--xl { font-size: clamp(1.6rem, calc(2vw + 1rem), 2.2rem); font-weight: 800; }
+  */ }
+  .heading .heading--xl {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+  .heading--lg {
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .heading--md {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #334155; }
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden; }
+  .card--hoverable:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); }
+  .card__media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #f8fafc;
+    object-fit: cover;
+    width: 100%; }
+  .card__content {
+    padding: 1rem; }
+  .card__title {
+    margin: 0 0 0.5rem;
+    font: 700 1.125rem/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .card__body {
+    margin: 0 0 1rem;
+    color: #475569;
+    line-height: 1.8; }
+
+/* Layout helpers */
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 1rem; }
+
+/* Section spacing */
+section {
+  margin-block: 1.5rem; }
+
+/* Demo page tweaks */
+main .card {
+  margin-top: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); }

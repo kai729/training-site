@@ -1,0 +1,35 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  padding: $sp-3 $sp-4;
+  font: 500 0.95rem/1.2 $font-base;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+  color: $color-neutral-900;
+  cursor: pointer;
+  transition: transform .02s ease, box-shadow .2s ease, filter .2s ease;
+
+  &:hover { box-shadow: $shadow-sm; }
+  &:active { transform: translateY(1px); }
+  &:focus-visible { @include focus-ring; }
+
+  &--primary {
+    background: $color-primary;
+    border-color: $color-primary;
+    color: $color-primary-contrast;
+    &:hover { filter: brightness(0.95); }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $color-neutral-900;
+  }
+
+  &--sm { padding: $sp-2 $sp-3; font-size: .9rem; }
+  &--lg { padding: $sp-4 $sp-6; font-size: 1.05rem; }
+  &.is-loading { pointer-events: none; opacity: .7; }
+}
+/* CSS Document */
+

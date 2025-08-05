@@ -1,0 +1,16 @@
+@mixin focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.35);
+}
+
+@mixin mq($min) {
+  @media (min-width: $min) { @content; }
+}
+
+// 単行省略
+@mixin line-clamp-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,14 @@
+.tabs {
+  display: flex; gap: $sp-2; border-bottom: 1px solid $color-border;
+  &__tab {
+    padding: $sp-3 $sp-4; border: 1px solid transparent; border-radius: $radius-sm $radius-sm 0 0;
+    color: $color-neutral-700; background: transparent; cursor: pointer;
+    &:hover { background: #f8fafc; }
+    &.is-active {
+      color: $color-neutral-900; background: $color-surface; border-color: $color-border; border-bottom-color: $color-surface;
+    }
+    &:focus-visible { @include focus-ring; }
+  }
+}
+/* CSS Document */
+

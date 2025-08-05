@@ -1,0 +1,17 @@
+.heading {
+  margin: 0 0 $sp-3;
+  color: $color-neutral-900;
+  font-family: $font-base;
+
+  /* ↓ ここを文字列で渡す。どちらか一方でOK */
+  /* 方法A: unquote */
+//  &--xl { font-size: clamp(1.6rem, unquote("calc(2vw + 1rem)"), 2.2rem); font-weight: 800; }
+	.heading--xl { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+
+  /* 方法B: 補間でエスケープ（Aが効けばこれは不要）
+  &--xl { font-size: clamp(1.6rem, #{'calc(2vw + 1rem)'}, 2.2rem); font-weight: 800; }
+  */
+
+  &--lg { font-size: 1.5rem; font-weight: 700; }
+  &--md { font-size: 1.125rem; font-weight: 600; color: $color-neutral-700; }
+}
