@@ -1,0 +1,344 @@
+/* ===== News Detail (アサヒ 2025/0805 に寄せる) ===== */
+
+$asahi-primary: #003f91;
+$asahi-text: #0f172a;
+$asahi-muted: #475569;
+$asahi-border: #e2e8f0;
+$asahi-bg: #f8fafc;
+
+.breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid $asahi-border;
+
+  &__list {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+
+    li {
+      color: $asahi-muted;
+      font-size: 0.9rem;
+    }
+    a {
+      color: $asahi-muted;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    li + li::before {
+      content: "›";
+      margin: 0 0.5rem 0 0.25rem;
+      color: $asahi-muted;
+    }
+  }
+}
+
+.article {
+  color: $asahi-text;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+
+  &__header {
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: $asahi-primary;
+    font-size: clamp(1.6rem, 2.2vw, 2.25rem);
+    letter-spacing: 0.01em;
+    &__name {
+      color: #000;
+      padding: 0 0 20px 0;
+      border-bottom: 2px solid #074194;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: center;
+    color: $asahi-muted;
+    font-size: 0.95rem;
+  }
+
+  &__date {
+    white-space: nowrap;
+  }
+
+  &__tag {
+    border: 1px solid $asahi-primary;
+    color: $asahi-primary;
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  &__hero {
+    margin: 2.25rem 0 2rem;
+    padding: 0 10%;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      background: #fff;
+    }
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: $asahi-muted;
+      text-align: left;
+    }
+  }
+
+  /* 本文タイポ（見出しリズム/余白） */
+  &__body {
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+
+    > p {
+      margin: 0 0 1.25rem;
+    }
+
+    h2 {
+      margin: 2rem 0 1rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: $asahi-text;
+      padding-left: 0.6rem;
+      border-left: 4px solid $asahi-primary;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 1.5rem 0 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    ul,
+    ol {
+      margin: 2rem 0 4rem 0;
+      padding-left: 0;
+    }
+    li {
+      margin: 0.3rem 0;
+      list-style: none;
+    }
+
+    /* 画像ブロック（本文内） */
+    .figure {
+      margin: 1.25rem 0;
+      text-align: center;
+
+      img {
+        border-radius: 0.4rem;
+      }
+      figcaption {
+        color: $asahi-muted;
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+      }
+
+      &--half {
+        max-width: 640px;
+        margin-inline: auto;
+      }
+    }
+
+    /* 表（仕様表っぽく） */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+      background: #fff;
+
+      th,
+      td {
+        border: 1px solid $asahi-border;
+        padding: 0.75rem 0.9rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      thead th {
+        background: $asahi-bg;
+        font-weight: 700;
+      }
+      tbody tr:nth-child(even) td {
+        background: #fafcff;
+      }
+    }
+
+    /* 引用（コメント枠） */
+    .quote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid $asahi-primary;
+      background: $asahi-bg;
+      color: #111;
+
+      p {
+        margin: 0 0 0.5rem;
+        font-style: italic;
+      }
+      cite {
+        color: $asahi-muted;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* 注釈/脚注っぽい小さめ文字 */
+    .note,
+    .caption,
+    small {
+      color: $asahi-muted;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+  }
+
+  &__footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid $asahi-border;
+    padding-top: 1.25rem;
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
+      padding: 0;
+      list-style: none;
+      a {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #1e293b;
+        font-size: 0.85rem;
+        text-decoration: none;
+      }
+    }
+
+    .pager {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      a {
+        color: $asahi-primary;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.news_content_btn_outer {
+  margin-top: 2rem;
+  text-align: center; // ボタン全体を中央寄せ
+  border-top: 1px solid #074194;
+  padding-top: 3rem;
+}
+
+.news_content_btn {
+  display: inline-block; // ボタン幅を中身に合わせる
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 20px;
+
+  &.btn-outline {
+    border: 1px solid #074194;
+    background-color: #fff;
+    color: #333;
+
+    &:hover {
+      background-color: #f5f5f5;
+      border-color: #999;
+    }
+  }
+
+  .btn_text {
+    display: inline-block;
+    color: #074194;
+    font-weight: 700;
+  }
+
+  .is-full {
+    flex: 1;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  i {
+    font-size: 0.85rem;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover i {
+    transform: translateX(3px); // 矢印が少し右に動く
+  }
+}
+
+/* スマホ調整（公式の詰め感に寄せる） */
+@media (max-width: 767px) {
+  .breadcrumb__list {
+    padding: 0.6rem 1rem;
+  }
+  .article {
+    padding: 1.25rem 1rem 2rem;
+
+    &__title {
+      font-size: clamp(1.4rem, 5.2vw, 1.8rem);
+    }
+    &__meta {
+      font-size: 0.9rem;
+    }
+    &__hero img {
+      border-radius: 0.35rem;
+    }
+    &__body {
+      font-size: 0.98rem;
+      .table {
+        font-size: 0.9rem;
+      }
+      .figure--half {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.site-footer {
+  background: #f9fafb;
+  border-top: 1px solid $color-border;
+  padding-block: $sp-5;
+
+  &__inner {
+    text-align: center;
+  }
+
+  .footer-nav__list {
+    display: flex;
+    justify-content: center;
+    gap: $sp-4;
+    margin-bottom: $sp-3;
+
+    a {
+      color: $color-neutral-600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 0.875rem;
+    color: $color-neutral-600;
+  }
+}
+/* CSS Document */
+

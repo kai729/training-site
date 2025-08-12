@@ -1,11 +1,15 @@
 /* 1行目のこれを削除：@import url("assets/css/style.scss"); */
 
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'components/button';
-@import 'components/heading';
-@import 'components/card';
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "components/button";
+@import "components/heading";
+@import "components/card";
+@import "components/header";
+@import "components/footer";
+@import "components/news";
+@import "components/article";
 
 /* Layout helpers */
 .container {
@@ -15,7 +19,39 @@
 }
 
 /* Section spacing */
-section { margin-block: $sp-6; }
+section {
+  margin-block: $sp-6;
+}
 
 /* Demo page tweaks */
-main .card { margin-top: $sp-4; box-shadow: $shadow-md; }
+main .card {
+  margin-top: $sp-4;
+  box-shadow: $shadow-md;
+}
+
+/* base: 960pxはPC想定。タブレット/スマホで段階的に広げすぎない */
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 860px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 0.875rem;
+  }
+  body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+  h1,
+  .heading--xl {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+}

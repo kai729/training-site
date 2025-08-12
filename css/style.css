@@ -1,102 +1,471 @@
-/*
-Error: Incompatible units: 'rem' and 'vw'.
-        on line 6 of /Users/kunokaito/Documents/training-site/scss/components/_heading.scss
-        from line 7 of /Users/kunokaito/Documents/training-site/scss/style.scss
+@charset "UTF-8";
+/* 1行目のこれを削除：@import url("assets/css/style.scss"); */
+/* Minimal reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 
-1: /* 1行目のこれを削除：@import url("assets/css/style.scss"); *\/
-2: 
-3: @import 'variables';
-4: @import 'mixins';
-5: @import 'reset';
-6: @import 'components/button';
-7: @import 'components/heading';
-8: @import 'components/card';
-9: 
-10: /* Layout helpers *\/
-11: .container {
+html {
+  font-size: 100%; }
 
-Backtrace:
-/Users/kunokaito/Documents/training-site/scss/components/_heading.scss:6
-/Users/kunokaito/Documents/training-site/scss/style.scss:7
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/value/number.rb:450:in `coercion_factor'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/value/number.rb:371:in `coerce'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/value/number.rb:431:in `operate'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/value/number.rb:97:in `plus'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/operation.rb:85:in `_perform'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:182:in `perform_arg'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `block in _perform'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each_with_index'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `map'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `_perform'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `load'
-/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Incompatible units: 'rem' and 'vw'.\A         on line 6 of /Users/kunokaito/Documents/training-site/scss/components/_heading.scss\A         from line 7 of /Users/kunokaito/Documents/training-site/scss/style.scss\A \A 1: /* 1行目のこれを削除：@import url(\"assets/css/style.scss\"); */\A 2: \A 3: @import 'variables';\A 4: @import 'mixins';\A 5: @import 'reset';\A 6: @import 'components/button';\A 7: @import 'components/heading';\A 8: @import 'components/card';\A 9: \A 10: /* Layout helpers */\A 11: .container {"; }
+body {
+  margin: 0;
+  font: 400 1rem/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+button, input, textarea, select {
+  font: inherit; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* CSS Document */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font: 500 0.95rem/1.2 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform .02s ease, box-shadow .2s ease, filter .2s ease; }
+  .btn:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); }
+  .btn:active {
+    transform: translateY(1px); }
+  .btn:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35); }
+  .btn--primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff; }
+    .btn--primary:hover {
+      filter: brightness(0.95); }
+  .btn--ghost {
+    background: transparent;
+    color: #0f172a; }
+  .btn--sm {
+    padding: 0.5rem 0.75rem;
+    font-size: .9rem; }
+  .btn--lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem; }
+  .btn.is-loading {
+    pointer-events: none;
+    opacity: .7; }
+
+/* CSS Document */
+.heading {
+  margin: 0 0 0.75rem;
+  color: #0f172a;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* ↓ ここを文字列で渡す。どちらか一方でOK */
+  /* 方法A: unquote */
+  /* 方法B: 補間でエスケープ（Aが効けばこれは不要）
+  &--xl { font-size: clamp(1.6rem, calc(2vw + 1rem), 2.2rem); font-weight: 800; }
+  */ }
+  .heading .heading--xl {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+  .heading--lg {
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .heading--md {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #334155; }
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden; }
+  .card--hoverable:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); }
+  .card__media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #f8fafc;
+    object-fit: cover;
+    width: 100%; }
+  .card__content {
+    padding: 1rem; }
+  .card__title {
+    margin: 0 0 0.5rem;
+    font: 700 1.125rem/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .card__body {
+    margin: 0 0 1rem;
+    color: #475569;
+    line-height: 1.8; }
+
+.site-header {
+  font-family: sans-serif;
+  color: #000; }
+  .site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; }
+  .site-header__top {
+    background-color: #fff;
+    font-size: 12px; }
+    .site-header__top .container {
+      justify-content: right; }
+    .site-header__top .top-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0 16px; }
+      .site-header__top .top-nav a {
+        color: #444;
+        text-decoration: none; }
+        .site-header__top .top-nav a:hover {
+          text-decoration: underline; }
+    .site-header__top .site-search {
+      display: flex;
+      align-items: center; }
+      .site-header__top .site-search input {
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 20px 0 0 20px;
+        font-size: 12px; }
+      .site-header__top .site-search button {
+        padding: 4px 10px;
+        border: 1px solid #ccc;
+        border-left: none;
+        background: #eee;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer; }
+  .site-header__bottom {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; }
+    .site-header__bottom .site-logo img {
+      height: 40px; }
+    .site-header__bottom .global-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .site-header__bottom .global-nav ul li a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000; }
+        .site-header__bottom .global-nav ul li a:hover {
+          text-decoration: underline; }
+
+.site-footer {
+  background: #f9fafb;
+  border-top: 1px solid #e2e8f0;
+  padding-block: 1.25rem; }
+  .site-footer__inner {
+    text-align: center; }
+  .site-footer .footer-nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem; }
+    .site-footer .footer-nav__list a {
+      color: #475569;
+      text-decoration: none; }
+      .site-footer .footer-nav__list a:hover {
+        text-decoration: underline; }
+  .site-footer__copyright {
+    font-size: 0.875rem;
+    color: #475569; }
+
+/* CSS Document */
+.news-list {
+  padding: 2rem; }
+  .news-list .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003f91;
+    margin-bottom: 1.5rem; }
+  .news-list .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem; }
+    .news-list .category-filter .filter-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease; }
+      .news-list .category-filter .filter-btn.is-active {
+        background-color: #003f91;
+        color: #fff; }
+      .news-list .category-filter .filter-btn:hover {
+        background-color: #e5e5e5; }
+  .news-list .news-year {
+    margin-top: 2rem; }
+    .news-list .news-year__heading {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #003f91;
+      padding-left: 0.5rem;
+      color: #003f91; }
+  .news-list__items {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .news-list__items .news-item {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #ccc; }
+      .news-list__items .news-item__image {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0; }
+      .news-list__items .news-item__content {
+        flex: 1; }
+      .news-list__items .news-item__meta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.25rem; }
+        .news-list__items .news-item__meta .news-item__date {
+          white-space: nowrap; }
+        .news-list__items .news-item__meta .news-item__tag {
+          background-color: #003f91;
+          color: white;
+          border-radius: 12px;
+          padding: 0.2rem 0.6rem;
+          font-size: 0.75rem;
+          line-height: 1; }
+      .news-list__items .news-item__title {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        color: #222;
+        line-height: 1.4; }
+      .news-list__items .news-item__desc {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6; }
+  .news-list .pagination {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; }
+    .news-list .pagination a {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease; }
+      .news-list .pagination a.is-active {
+        background-color: #003f91;
+        color: #fff; }
+      .news-list .pagination a:hover {
+        background-color: #eee; }
+
+/* CSS Document */
+/* 基本トークン（手元の変数があるなら置き換えてOK） */
+.breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0; }
+  .breadcrumb__list {
+    display: flex;
+    gap: .5rem;
+    padding: .75rem 0;
+    margin: 0;
+    list-style: none; }
+    .breadcrumb__list li {
+      color: #475569; }
+    .breadcrumb__list a {
+      color: #475569;
+      text-decoration: none; }
+    .breadcrumb__list a:hover {
+      text-decoration: underline; }
+    .breadcrumb__list li + li::before {
+      content: "›";
+      margin-right: .5rem;
+      color: #475569; }
+
+.article {
+  color: #0f172a;
+  padding-block: 2rem;
+  /* 本文タイポグラフィ */
+  /* 画像レイアウト */
+  /* 表 */
+  /* 引用 */ }
+  .article__header {
+    margin-bottom: 1rem; }
+  .article__title {
+    font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+    line-height: 1.25;
+    font-weight: 800;
+    margin: 0 0 .5rem;
+    color: #003f91; }
+  .article__meta {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    color: #475569;
+    font-size: .95rem; }
+  .article__tag {
+    border: 1px solid #003f91;
+    color: #003f91;
+    border-radius: 999px;
+    padding: .1rem .6rem;
+    font-size: .8rem; }
+  .article__hero {
+    margin: 1.25rem 0 2rem; }
+    .article__hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: .5rem; }
+    .article__hero figcaption {
+      color: #475569;
+      font-size: .85rem;
+      margin-top: .5rem; }
+  .article__body {
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: .01em; }
+    .article__body > p {
+      margin: 0 0 1.25rem; }
+    .article__body h2 {
+      margin: 2rem 0 1rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding-left: .6rem;
+      border-left: 4px solid #003f91; }
+    .article__body h3 {
+      margin: 1.5rem 0 .75rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #111; }
+    .article__body ul, .article__body ol {
+      padding-left: 1.25rem;
+      margin: 0 0 1.25rem; }
+    .article__body li {
+      margin: .25rem 0; }
+  .article .figure {
+    margin: 1.25rem 0;
+    text-align: center; }
+    .article .figure img {
+      border-radius: .4rem; }
+    .article .figure figcaption {
+      color: #475569;
+      font-size: .85rem;
+      margin-top: .4rem; }
+    .article .figure--half {
+      max-width: 640px;
+      margin-inline: auto; }
+  .article .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: .95rem; }
+    .article .table th, .article .table td {
+      border: 1px solid #e2e8f0;
+      padding: .75rem;
+      text-align: left; }
+    .article .table thead th {
+      background: #f8fafc;
+      font-weight: 700; }
+  .article .quote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #003f91;
+    background: #f8fafc;
+    color: #111; }
+    .article .quote p {
+      margin: 0 0 .5rem;
+      font-style: italic; }
+    .article .quote cite {
+      color: #475569;
+      font-size: .9rem; }
+  .article__footer {
+    margin-top: 2.5rem; }
+
+/* タグ & ページャ */
+.tags {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none; }
+  .tags a {
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1e293b;
+    font-size: .85rem;
+    text-decoration: none; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem; }
+  .pager a {
+    color: #003f91;
+    text-decoration: none; }
+  .pager a:hover {
+    text-decoration: underline; }
+
+/* 768px未満の読みやすさ調整（必要なら） */
+@media (max-width: 767px) {
+  .article__meta {
+    flex-wrap: wrap;
+    row-gap: .25rem; }
+  .article .figure--half {
+    max-width: 100%; }
+  .article .table {
+    font-size: .9rem; } }
+/* Layout helpers */
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 1rem; }
+
+/* Section spacing */
+section {
+  margin-block: 1.5rem; }
+
+/* Demo page tweaks */
+main .card {
+  margin-top: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); }
+
+/*# sourceMappingURL=style.css.map */

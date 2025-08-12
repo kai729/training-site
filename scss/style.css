@@ -115,6 +115,430 @@ a {
     color: #475569;
     line-height: 1.8; }
 
+.site-header {
+  font-family: sans-serif;
+  color: #000; }
+  .site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; }
+  .site-header__top {
+    background-color: #fff;
+    font-size: 12px; }
+    .site-header__top .container {
+      justify-content: right; }
+    .site-header__top .top-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0 16px; }
+      .site-header__top .top-nav a {
+        color: #444;
+        text-decoration: none; }
+        .site-header__top .top-nav a:hover {
+          text-decoration: underline; }
+    .site-header__top .site-search {
+      display: flex;
+      align-items: center; }
+      .site-header__top .site-search input {
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 20px 0 0 20px;
+        font-size: 12px; }
+      .site-header__top .site-search button {
+        padding: 4px 10px;
+        border: 1px solid #ccc;
+        border-left: none;
+        background: #eee;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer; }
+  .site-header__bottom {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; }
+    .site-header__bottom .site-logo img {
+      height: 40px; }
+    .site-header__bottom .global-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .site-header__bottom .global-nav ul li a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000; }
+        .site-header__bottom .global-nav ul li a:hover {
+          text-decoration: underline; }
+
+.site-footer {
+  background: #f9fafb;
+  border-top: 1px solid #e2e8f0;
+  padding-block: 1.25rem; }
+  .site-footer__inner {
+    text-align: center; }
+  .site-footer .footer-nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem; }
+    .site-footer .footer-nav__list a {
+      color: #475569;
+      text-decoration: none; }
+      .site-footer .footer-nav__list a:hover {
+        text-decoration: underline; }
+  .site-footer__copyright {
+    font-size: 0.875rem;
+    color: #475569; }
+
+/* CSS Document */
+.news-list {
+  padding: 2rem; }
+  .news-list .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003f91;
+    margin-bottom: 1.5rem; }
+  .news-list .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem; }
+    .news-list .category-filter .filter-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease; }
+      .news-list .category-filter .filter-btn.is-active {
+        background-color: #003f91;
+        color: #fff; }
+      .news-list .category-filter .filter-btn:hover {
+        background-color: #e5e5e5; }
+  .news-list .news-year {
+    margin-top: 2rem; }
+    .news-list .news-year__heading {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #003f91;
+      padding-left: 0.5rem;
+      color: #003f91; }
+  .news-list__items {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .news-list__items .news-item {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #ccc; }
+      .news-list__items .news-item__image {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0; }
+      .news-list__items .news-item__content {
+        flex: 1; }
+      .news-list__items .news-item__meta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.25rem; }
+        .news-list__items .news-item__meta .news-item__date {
+          white-space: nowrap; }
+        .news-list__items .news-item__meta .news-item__tag {
+          background-color: #003f91;
+          color: white;
+          border-radius: 12px;
+          padding: 0.2rem 0.6rem;
+          font-size: 0.75rem;
+          line-height: 1; }
+      .news-list__items .news-item__title {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        color: #222;
+        line-height: 1.4; }
+      .news-list__items .news-item__desc {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6; }
+  .news-list .pagination {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; }
+    .news-list .pagination a {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease; }
+      .news-list .pagination a.is-active {
+        background-color: #003f91;
+        color: #fff; }
+      .news-list .pagination a:hover {
+        background-color: #eee; }
+
+/* ===== News Detail (アサヒ 2025/0805 に寄せる) ===== */
+.breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0; }
+  .breadcrumb__list {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none; }
+    .breadcrumb__list li {
+      color: #475569;
+      font-size: 0.9rem; }
+    .breadcrumb__list a {
+      color: #475569;
+      text-decoration: none; }
+    .breadcrumb__list a:hover {
+      text-decoration: underline; }
+    .breadcrumb__list li + li::before {
+      content: "›";
+      margin: 0 0.5rem 0 0.25rem;
+      color: #475569; }
+
+.article {
+  color: #0f172a;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  /* 本文タイポ（見出しリズム/余白） */ }
+  .article__header {
+    margin-bottom: 1.25rem; }
+  .article__title {
+    margin: 0 0 0.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #003f91;
+    font-size: clamp(1.6rem, 2.2vw, 2.25rem);
+    letter-spacing: 0.01em; }
+    .article__title__name {
+      color: #000;
+      padding: 0 0 20px 0;
+      border-bottom: 2px solid #074194; }
+  .article__meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: center;
+    color: #475569;
+    font-size: 0.95rem; }
+  .article__date {
+    white-space: nowrap; }
+  .article__tag {
+    border: 1px solid #003f91;
+    color: #003f91;
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.8rem;
+    line-height: 1.6; }
+  .article__hero {
+    margin: 2.25rem 0 2rem;
+    padding: 0 10%; }
+    .article__hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      background: #fff; }
+    .article__hero figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #475569;
+      text-align: left; }
+  .article__body {
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+    /* 画像ブロック（本文内） */
+    /* 表（仕様表っぽく） */
+    /* 引用（コメント枠） */
+    /* 注釈/脚注っぽい小さめ文字 */ }
+    .article__body > p {
+      margin: 0 0 1.25rem; }
+    .article__body h2 {
+      margin: 2rem 0 1rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f172a;
+      padding-left: 0.6rem;
+      border-left: 4px solid #003f91;
+      line-height: 1.35; }
+    .article__body h3 {
+      margin: 1.5rem 0 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #111; }
+    .article__body ul,
+    .article__body ol {
+      margin: 2rem 0 4rem 0;
+      padding-left: 0; }
+    .article__body li {
+      margin: 0.3rem 0;
+      list-style: none; }
+    .article__body .figure {
+      margin: 1.25rem 0;
+      text-align: center; }
+      .article__body .figure img {
+        border-radius: 0.4rem; }
+      .article__body .figure figcaption {
+        color: #475569;
+        font-size: 0.85rem;
+        margin-top: 0.4rem; }
+      .article__body .figure--half {
+        max-width: 640px;
+        margin-inline: auto; }
+    .article__body .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+      background: #fff; }
+      .article__body .table th,
+      .article__body .table td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem 0.9rem;
+        text-align: left;
+        vertical-align: top; }
+      .article__body .table thead th {
+        background: #f8fafc;
+        font-weight: 700; }
+      .article__body .table tbody tr:nth-child(even) td {
+        background: #fafcff; }
+    .article__body .quote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid #003f91;
+      background: #f8fafc;
+      color: #111; }
+      .article__body .quote p {
+        margin: 0 0 0.5rem;
+        font-style: italic; }
+      .article__body .quote cite {
+        color: #475569;
+        font-size: 0.9rem; }
+    .article__body .note,
+    .article__body .caption,
+    .article__body small {
+      color: #475569;
+      font-size: 0.85rem;
+      line-height: 1.7; }
+  .article__footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.25rem; }
+    .article__footer .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
+      padding: 0;
+      list-style: none; }
+      .article__footer .tags a {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #1e293b;
+        font-size: 0.85rem;
+        text-decoration: none; }
+    .article__footer .pager {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem; }
+      .article__footer .pager a {
+        color: #003f91;
+        text-decoration: none;
+        font-weight: 600; }
+      .article__footer .pager a:hover {
+        text-decoration: underline; }
+
+.news_content_btn_outer {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid #074194;
+  padding-top: 3rem; }
+
+.news_content_btn {
+  display: inline-block; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 20px; }
+  .btn.btn-outline {
+    border: 1px solid #074194;
+    background-color: #fff;
+    color: #333; }
+    .btn.btn-outline:hover {
+      background-color: #f5f5f5;
+      border-color: #999; }
+  .btn .btn_text {
+    display: inline-block;
+    color: #074194;
+    font-weight: 700; }
+  .btn .is-full {
+    flex: 1; }
+  .btn .text-center {
+    text-align: center; }
+  .btn i {
+    font-size: 0.85rem;
+    color: inherit;
+    transition: transform 0.2s ease-in-out; }
+  .btn:hover i {
+    transform: translateX(3px); }
+
+/* スマホ調整（公式の詰め感に寄せる） */
+@media (max-width: 767px) {
+  .breadcrumb__list {
+    padding: 0.6rem 1rem; }
+
+  .article {
+    padding: 1.25rem 1rem 2rem; }
+    .article__title {
+      font-size: clamp(1.4rem, 5.2vw, 1.8rem); }
+    .article__meta {
+      font-size: 0.9rem; }
+    .article__hero img {
+      border-radius: 0.35rem; }
+    .article__body {
+      font-size: 0.98rem; }
+      .article__body .table {
+        font-size: 0.9rem; }
+      .article__body .figure--half {
+        max-width: 100%; } }
 /* Layout helpers */
 .container {
   max-width: 960px;
@@ -129,3 +553,27 @@ section {
 main .card {
   margin-top: 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); }
+
+/* base: 960pxはPC想定。タブレット/スマホで段階的に広げすぎない */
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 1rem; }
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 860px; } }
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 0.875rem; }
+
+  body {
+    font-size: 0.98rem;
+    line-height: 1.7; }
+
+  h1,
+  .heading--xl {
+    font-size: clamp(1.4rem, 5vw, 1.8rem); } }
+
+/*# sourceMappingURL=style.css.map */
